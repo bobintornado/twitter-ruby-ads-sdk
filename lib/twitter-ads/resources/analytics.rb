@@ -120,6 +120,8 @@ module TwitterAds
         granularity       = opts.fetch(:granularity, :hour)
         placement         = opts.fetch(:placement, Placement::ALL_ON_TWITTER)
         segmentation_type = opts.fetch(:segmentation_type, nil)
+        country = opts.fetch(:country, nil)
+        platform = opts.fetch(:platform, nil)
 
         params = {
           metric_groups: metric_groups.join(','),
