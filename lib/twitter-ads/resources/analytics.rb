@@ -129,7 +129,9 @@ module TwitterAds
           end_time: TwitterAds::Utils.to_time(end_time, granularity),
           granularity: granularity.to_s.upcase,
           entity: ANALYTICS_MAP[name],
-          placement: placement
+          placement: placement,
+          platform: platform,
+          country: country
         }
 
         params[:segmentation_type] = segmentation_type.to_s.upcase if segmentation_type
