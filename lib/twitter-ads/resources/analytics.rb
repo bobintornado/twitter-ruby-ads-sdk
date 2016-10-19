@@ -132,7 +132,7 @@ module TwitterAds
           placement: placement,
           platform: platform,
           country: country
-        }
+        }.compact
 
         params[:segmentation_type] = segmentation_type.to_s.upcase if segmentation_type
         params['entity_ids'] = ids.join(',')
